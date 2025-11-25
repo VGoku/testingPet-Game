@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📜 Fabled Familiars</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pound">
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1><img src="img/assets/fabledfamiliarsbannersmall.png" alt="Scroll Icon" style="height: 3em; vertical-align: middle; margin-right: 0em;"></h1>
+      <div class="timer" id="serverTime"></div>
+      
+      <div class="nav">
+        <a href="index.html" id="btn-home" class="nav-btn"><img src="img/assets/house.png" class="nav-icon" alt="Home"> Home</a>
+        <a href="familiars.html" id="btn-familiars" class="nav-btn"><img src="img/familiars/familiars.png" class="nav-icon" alt="Familiars"> Familiars</a>
+        <a href="inventory.html" id="btn-inventory" class="nav-btn"><img src="img/assets/crate.png" class="nav-icon" alt="Inventory"> Inventory</a>
+        <a href="shop.html" id="btn-shop" class="nav-btn"><img src="img/assets/shopicon.png" class="nav-icon" alt="Shop"> Shop</a>
+        <a href="activities.html" id="btn-activities" class="nav-btn"><img src="img/assets/target.png" class="nav-icon" alt="Activities"> Activities</a>
+        <a href="adopt.html" id="btn-adopt" class="nav-btn"><img src="img/assets/adopt-sign1.png" class="nav-icon" alt="Adopt"> Adopt</a>
+        <a href="pound.html" id="btn-pound" class="nav-btn active"><img src="img/assets/pound-sign.png" class="nav-icon" alt="Pound"> Pound</a>
+        <a href="battle.html" id="btn-battle" class="nav-btn" hidden><img src="img/assets/battle.png" class="nav-icon" alt="Battle"> Battle</a>
+        <a href="training.html" id="btn-training" class="nav-btn"><img src="img/assets/training-page.png" class="nav-icon" alt="Training"> Training</a>
+      </div>
+
+      <div class="status-bar">
+        <div class="status-item"><img src="img/assets/coins.png" class="status-icon" alt="Coins"> Coins: <span id="coinCount">150</span></div>
+        <div class="status-item"><img src="img/assets/dust.png" class="status-icon" alt="Dust"> Dust: <span id="dustCount">25</span></div>
+        <div class="status-item"><img src="img/assets/training-page.png"  class="status-icon" alt="Level"> Level: <span id="playerLevel">1</span></div>
+        <div class="status-item">⭐ XP: <span id="playerXP">0</span>/100</div>
+        <button id="mute-btn" class="nav-btn" onclick="toggleMute()">Mute</button>
+        <button id="clear-save-btn" class="nav-btn" onclick="clearSave()">Clear Save</button>
+      </div>
+    </div>
+
+    <!-- Pound Section -->
+    <div class="section active" id="pound">
+      <h2>🏚️ The Pound</h2>
+      <p>Send unwanted familiars to the pound or adopt a new friend.</p>
+      <!-- Pound content will go here -->
+    </div>
+
+  </div>
+
+  <!-- Notification Element -->
+  <div class="notification" id="notification"></div>
+
+  <!-- Hatching Animation -->
+  <div id="hatching-overlay" class="hidden">
+    <div class="egg"></div>
+  </div>
+
+  <!-- Background music (loop) -->
+  <audio id="bg-music" src="sounds/music.ogg" loop preload="auto"></audio>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/battle.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
